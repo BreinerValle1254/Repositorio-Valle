@@ -1,0 +1,222 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;  /* Fondo blanco por defecto para pantallas pequeñas */
+  padding: 2rem;
+  margin: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  border: none; /* sin borde por defecto */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box h3 {
+  margin-bottom: 1rem;
+  color: #1976d2;
+}
+
+select, button {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  background: white;
+  color: #333;
+  font-weight: normal;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+button:hover, select:hover, select:focus {
+  background-color: #125aa0;
+  border-color: #125aa0;
+  color: white;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+#repo-container a {
+  color: #000;
+  text-decoration: underline;
+}
+
+#repo-container a:hover {
+  color: #000;
+}
+
+.loading-box {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: aqua;
+  border-radius: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+#selected-language-bar {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #e8f0fe;
+  border-radius: 8px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+#retry-static {
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  user-select: none;
+  font-weight: 600;
+  max-width: 150px;
+}
+
+#refresh-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#refresh-btn {
+  width: 600px;
+  max-width: 90vw;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#refresh-btn:hover {
+  background-color: #125aa0;
+}
+
+.please-msg {
+  font-size: 1.5rem;
+  color: mediumaquamarine;
+  margin-top: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  }
+
+  .container-grid {
+    gap: 2rem; /* espacio entre cuadros */
+  }
+
+  .box {
+    margin: 1rem; /* margen para todos los cuadros */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border: 4px solid transparent;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Bordes de colores diferentes para cuadros 1,2 y 3 */
+  .box.box1 {
+    border-color: #ff6b6b; /* rojo suave */
+  }
+
+  .box.box2 {
+    border-color: #4ecdc4; /* verde agua */
+  }
+
+  .box.box3 {
+    border-color: #556270; /* azul grisáceo */
+  }
+
+  /* Para el cuadro con id #cuadro */
+  #cuadro {
+    border-color: #c7f464; /* amarillo lima */
+  }
+
+  .box:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Ajustes para inputs y botones */
+  select, button {
+    background: #e0f7f6;
+    border: 2px solid #4ecdc4;
+    color: #333;
+    font-weight: 600;
+  }
+
+  button {
+    background-color: #4ecdc4;
+    border: none;
+    color: white;
+  }
+
+  button:hover, select:hover, select:focus {
+    background-color: #3baaa3;
+    border-color: #3baaa3;
+    color: white;
+  }
+
+  .loading-box {
+    background: #81d4fa;
+    color: #222;
+    font-weight: 600;
+  }
+
+  #retry-static {
+    background: #ff6b6b;
+  }
+
+  #retry-static:hover {
+    background-color: #e94b4b;
+  }
+
+  #refresh-btn {
+    background-color: #62d723;
+  }
+
+  #refresh-btn:hover {
+    background-color: #e35b0e;
+  }
+}
